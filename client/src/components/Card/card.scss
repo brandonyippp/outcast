@@ -1,0 +1,53 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid green;
+  width: 220px;
+  height: 275px;
+  text-decoration: none;
+}
+
+//TODO: Control how image is displayed here
+.preview-image-container {
+  display: flex;
+  height: 55%;
+}
+
+//TODO: Figure out why width 100% here instead of object-fit
+.preview-image {
+  display: flex;
+  width: 100%;
+}
+
+//TODO: Do "..." if text exceeds
+.card-title-text {
+  font-size: 20px;
+  height: fit-content;
+  border: 1px solid red;
+  overflow: hidden;
+  height: 25%;
+}
+
+.content-info-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-self: flex-end;
+  align-items: center;
+  height: 20%;
+}
+
+#empty-flexbox {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.platform {
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  padding-bottom: 5px;
+  padding-right: 5px;
+}

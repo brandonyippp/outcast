@@ -22,8 +22,13 @@ const CardContainer: React.FC<CardContainerProps> = ({ content }) => {
               <Card title={card.title} platform={card.platform} />
             ))}
           </div>
-          <div className="card-container-options">
-            <p>show more</p>
+          <div className="options-container">
+            <div className="card-container-options">
+              <p>Show More</p>
+              <p>|</p>
+
+              <p>Hide All</p>
+            </div>
           </div>
         </div>
       ) : (
@@ -37,8 +42,12 @@ const CardContainer: React.FC<CardContainerProps> = ({ content }) => {
               <Card title={card.title} platform={card.platform} />
             ))}
           </div>
-          <div className="card-container-options">
-            <p>show more</p>
+          <div className="options-container">
+            <div className="card-container-options">
+              <p>Show More</p>
+              <p>|</p>
+              <p>Hide All</p>
+            </div>
           </div>
         </div>
       ) : (

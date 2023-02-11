@@ -25,13 +25,25 @@
 .card-container {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
+  //   display: flex;
+  //   flex-direction: row;
+  //   overflow-x: auto;
   width: 100%;
   height: fit-content;
+}
+
+.options-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  border: 1px solid black;
 }
 
 .card-container-options {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  width: 150px;
+  justify-content: space-between;
 }

@@ -6,13 +6,60 @@ import "./basePage.scss";
 import * as Constants from "../../constants/consts";
 
 const BasePage = () => {
-  const [tempCardArr, setTempCardArr] = useState<Constants.CardDetails[]>([
+  const [youtubeArr, setYoutubeArr] = useState<Constants.CardDetails[]>([
+    { title: "JoeWo Frag Video", platform: Constants.YOUTUBE },
+    { title: "Feegoe Highlight Reel", platform: Constants.YOUTUBE },
+    { title: "JoeWo Frag Video", platform: Constants.YOUTUBE },
+    { title: "Feegoe Highlight Reel", platform: Constants.YOUTUBE },
+    { title: "JoeWo Frag Video", platform: Constants.YOUTUBE },
+    { title: "Feegoe Highlight Reel", platform: Constants.YOUTUBE },
+    { title: "JoeWo Frag Video", platform: Constants.YOUTUBE },
+    { title: "Feegoe Highlight Reel", platform: Constants.YOUTUBE },
+    { title: "JoeWo Frag Video", platform: Constants.YOUTUBE },
+    { title: "Feegoe Highlight Reel", platform: Constants.YOUTUBE },
+    { title: "JoeWo Frag Video", platform: Constants.YOUTUBE },
+    { title: "Feegoe Highlight Reel", platform: Constants.YOUTUBE },
+    { title: "JoeWo Frag Video", platform: Constants.YOUTUBE },
+    { title: "Feegoe Highlight Reel", platform: Constants.YOUTUBE },
+    { title: "JoeWo Frag Video", platform: Constants.YOUTUBE },
+    { title: "Feegoe Highlight Reel", platform: Constants.YOUTUBE },
+    { title: "JoeWo Frag Video", platform: Constants.YOUTUBE },
+    { title: "Feegoe Highlight Reel", platform: Constants.YOUTUBE },
+    { title: "JoeWo Frag Video", platform: Constants.YOUTUBE },
+    { title: "Feegoe Highlight Reel", platform: Constants.YOUTUBE },
+    { title: "JoeWo Frag Video", platform: Constants.YOUTUBE },
+    { title: "Feegoe Highlight Reel", platform: Constants.YOUTUBE },
+    { title: "JoeWo Frag Video", platform: Constants.YOUTUBE },
+    { title: "Feegoe Highlight Reel", platform: Constants.YOUTUBE },
+  ]);
+
+  const [twitchArr, setTwitchArr] = useState<Constants.CardDetails[]>([
     { title: "STPeach ASMR", platform: Constants.TWITCH },
     { title: "Indiefoxx ASMR", platform: Constants.TWITCH },
     { title: "Amouranth ASMR", platform: Constants.TWITCH },
     { title: "Pokimane ASMR", platform: Constants.TWITCH },
-    { title: "JoeWo Frag Video", platform: Constants.YOUTUBE },
-    { title: "Feegoe Highlight Reel", platform: Constants.YOUTUBE },
+    { title: "STPeach ASMR", platform: Constants.TWITCH },
+    { title: "Indiefoxx ASMR", platform: Constants.TWITCH },
+    { title: "Amouranth ASMR", platform: Constants.TWITCH },
+    { title: "Pokimane ASMR", platform: Constants.TWITCH },
+    { title: "STPeach ASMR", platform: Constants.TWITCH },
+    { title: "Indiefoxx ASMR", platform: Constants.TWITCH },
+    { title: "Amouranth ASMR", platform: Constants.TWITCH },
+    { title: "Pokimane ASMR", platform: Constants.TWITCH },
+    { title: "STPeach ASMR", platform: Constants.TWITCH },
+    { title: "Indiefoxx ASMR", platform: Constants.TWITCH },
+    { title: "Amouranth ASMR", platform: Constants.TWITCH },
+    { title: "Pokimane ASMR", platform: Constants.TWITCH },
+    { title: "Amouranth ASMR", platform: Constants.TWITCH },
+    { title: "Pokimane ASMR", platform: Constants.TWITCH },
+    { title: "STPeach ASMR", platform: Constants.TWITCH },
+    { title: "Indiefoxx ASMR", platform: Constants.TWITCH },
+    { title: "Amouranth ASMR", platform: Constants.TWITCH },
+    { title: "Pokimane ASMR", platform: Constants.TWITCH },
+    { title: "STPeach ASMR", platform: Constants.TWITCH },
+    { title: "Indiefoxx ASMR", platform: Constants.TWITCH },
+    { title: "Amouranth ASMR", platform: Constants.TWITCH },
+    { title: "Pokimane ASMR", platform: Constants.TWITCH },
   ]);
 
   return (
@@ -20,7 +67,7 @@ const BasePage = () => {
       <NavBar />
       <div id="content-container">
         <SideBar />
-        <CardContainer header={Constants.LIVE_NOW} content={tempCardArr} />
+        <CardContainer content={{ youtube: youtubeArr, twitch: twitchArr }} />
       </div>
     </div>
   );

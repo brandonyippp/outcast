@@ -1,53 +1,92 @@
-.card {
+#card {
   display: flex;
   flex-direction: column;
-  border: 1px solid green;
   width: 220px;
   height: 275px;
+  padding: 1px;
   text-decoration: none;
 }
 
 //TODO: Control how image is displayed here
-.preview-image-container {
+#preview-image-container {
   display: flex;
-  height: 55%;
+  height: 65%;
 }
 
 //TODO: Figure out why width 100% here instead of object-fit
-.preview-image {
+#preview-image {
+  display: flex;
+  width: 100%;
+}
+
+#content-info-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 35%;
+  overflow: hidden;
+}
+
+.text-container-template {
+  padding-left: 2px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+//TODO: Change height later to change text to ...
+#content-title-container {
+  @extend .text-container-template;
   display: flex;
   width: 100%;
 }
 
 //TODO: Do "..." if text exceeds
-.card-title-text {
+#content-title-text {
   font-size: 20px;
-  height: fit-content;
-  border: 1px solid red;
   overflow: hidden;
-  height: 25%;
 }
 
-.content-info-container {
+#content-source-info-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  justify-self: flex-end;
-  align-items: center;
-  height: 20%;
-}
-
-#empty-flexbox {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+  justify-content: space-evenly;
   overflow: hidden;
 }
 
-.platform {
+#content-metadata-container {
+  @extend .text-container-template;
   display: flex;
-  width: fit-content;
-  height: fit-content;
-  padding-bottom: 5px;
-  padding-right: 5px;
+  flex-direction: column;
+  width: 80%;
+  height: 100%;
+}
+
+#content-metadata-text {
+  font-size: 15px;
+  color: grey;
+}
+
+#content-platform-container {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  height: 100%;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+
+#platform-icon-container {
+  display: flex;
+  width: 35px;
+  height: 35px;
+  overflow: hidden;
+  border-radius: 7px;
+}
+
+#platform-icon {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

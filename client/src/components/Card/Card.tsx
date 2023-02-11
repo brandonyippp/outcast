@@ -7,25 +7,32 @@ import twitchBackground from "../../images/twitch-bg.jpg";
 const Card: React.FC<CardDetails> = ({ title, platform }) => {
   return (
     <a
-      className="card"
+      id="card"
       href="https://www.twitch.tv/solezano"
       target="_blank"
       rel="noopener noreferrer"
     >
-      <div className="preview-image-container">
-        <img
-          className="preview-image"
-          src={twitchBackground}
-          alt="platform-bg"
-        />
+      <div id="preview-image-container">
+        <img id="preview-image" src={twitchBackground} alt="platform-bg" />
       </div>
-      <p className="card-title-text">{title}</p>
-      <div className="content-info-container">
-        <p>metadata</p>
-        <div id="empty-flexbox">
-          <div />
-          {/*<p className="platform">{platform}</p> */}
-          <img className="platform" src={twitchBackground} alt="platform-bg" />
+      <div id="content-info-container">
+        <div id="content-title-container">
+          <p id="content-title-text">{title}</p>
+        </div>
+        <div id="content-source-info-container">
+          <div id="content-metadata-container">
+            <p id="content-metadata-text">JoeWo</p>
+            <p id="content-metadata-text">18K Views - 43 minutes ago</p>
+          </div>
+          <div id="content-platform-container">
+            <div id="platform-icon-container">
+              <img
+                id="platform-icon"
+                src={twitchBackground}
+                alt="platform-bg"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </a>

@@ -1,21 +1,49 @@
 import React from "react";
 import Card from "../Card/Card";
 import "./cardContainer.scss";
+import * as Constants from "../../constants/consts";
 
 interface CardContainerProps {
-  header: string;
-  content: any[];
+  content: {
+    twitch?: Constants.CardDetails[];
+    youtube?: Constants.CardDetails[];
+  };
 }
 
-const CardContainer: React.FC<CardContainerProps> = ({ header, content }) => {
+//TODO: Only show each inner-cards-container if results are populated from Twitch/YT/etc. API calls
+const CardContainer: React.FC<CardContainerProps> = ({ content }) => {
   return (
-    <div id="outer-card-container">
-      <div id="card-container-header">{header}</div>
-      <div id="card-container">
-        {content.map((card) => (
-          <Card title={card.title} platform={card.platform} />
-        ))}
-      </div>
+    <div className="outer-canvas-container">
+      {content.youtube ? (
+        <div className="inner-cards-container">
+          <div className="card-container-header">{Constants.YOUTUBE}</div>
+          <div className="card-container">
+            {content.youtube.map((card) => (
+              <Card title={card.title} platform={card.platform} />
+            ))}
+          </div>
+          <div className="card-container-options">
+            <p>show more</p>
+          </div>
+        </div>
+      ) : (
+        <></>
+      )}
+      {content.twitch ? (
+        <div className="inner-cards-container">
+          <div className="card-container-header">{Constants.TWITCH}</div>
+          <div className="card-container">
+            {content.twitch.map((card) => (
+              <Card title={card.title} platform={card.platform} />
+            ))}
+          </div>
+          <div className="card-container-options">
+            <p>show more</p>
+          </div>
+        </div>
+      ) : (
+        <></>
+      )}
     </div>
   );
 };

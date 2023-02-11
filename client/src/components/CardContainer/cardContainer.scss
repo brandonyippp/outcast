@@ -1,12 +1,20 @@
-#outer-card-container {
+.outer-canvas-container {
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: fit-content;
   padding: 20px;
-  border: 1px solid black;
 }
 
-#card-container-header {
+.inner-cards-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: fit-content;
+  margin-bottom: 20px;
+}
+
+.card-container-header {
   font-size: 27px;
   font-weight: bold;
   margin-bottom: 10px;
@@ -14,9 +22,16 @@
   width: fit-content;
 }
 
-#card-container {
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  width: 100%;
+  height: fit-content;
+}
+
+.card-container-options {
   display: flex;
   flex-direction: row;
-  width: 100%;
-  border: 1px solid black;
+  align-items: center;
+  justify-content: center;
 }
